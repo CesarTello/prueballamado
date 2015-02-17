@@ -15,10 +15,10 @@
 			try
 			  {
 				  
+	alert('antes del llamado');			  
 				  
 				  
-				  
- window.plugins.launcher.canLaunch({packageName:'com.facebook.katana'}, successCallback, errorCallback);
+ window.plugins.launcher.canLaunch({packageName:'com.facebook.katana'}, successCallback(), errorCallback());
 	
 	
 	
