@@ -56,7 +56,7 @@ permission on your app, which PhoneGap requires.
 	
 	
     <!-- Plugins can also be added here. -->
-<gap:plugin name="com.hutchind.cordova.plugins.launcher" />
+<plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />
 
 
 

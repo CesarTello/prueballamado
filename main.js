@@ -18,7 +18,12 @@
 	alert('antes del llamado');			  
 				  
 				  
- window.plugins.launcher.canLaunch({packageName:'com.facebook.katana'}, function(){alert('exito');}, function(){alert('error');});
+window.plugins.webintent.startActivity({
+    action: window.plugins.webintent.ACTION_VIEW,
+    url: 'geo:0,0?q=' + 'New York'}, 
+    function() {alert('all good');}, 
+    function() {alert('Failed to open URL via Android Intent')}
+);
 	
 	
 	
@@ -34,13 +39,7 @@
 		
 		//after fastclick instantiation and listeners setup get rest of code in load fx
 		
-function successCallback(){
-	alert('exito');
-}
-		  
-function errorCallback(){
-	alert('fallo');
-}		  
+	  
 	}, false);
 	
 
