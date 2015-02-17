@@ -12,22 +12,40 @@
   <head>
     <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>com.lampa.startApp test</title>
-		<link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<title>Launch Test</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/acp1.min.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.0.min.css" />        
-		<script type="text/javascript" charset="utf-8" src="startApp.js"></script>
-		<script type="application/javascript" src="js/fastclick.js"></script>        
+		<script type="application/javascript" src="js/fastclick.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="js/Launcher.js"></script>       
 		<script type="text/javascript" charset="utf-8" src="main.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.mobile-1.4.0.min.js"></script>
 		<script type="application/javascript" src="js/maxlen.js"></script>
-		<script type="application/javascript" src="js/fastclick.js"></script>
-		<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>        
+		<script type="application/javascript" src="js/fastclick.js"></script> 
+        <script type="application/javascript" src="js/webintent.js"></script> 
+<script>
+function init() {
+document.addEventListener("deviceready",deviceReady,false);
+}
+function deviceReady() {
+// console.log("Device Ready");
+window.plugins.webintent.getUri(function(url) {
+if(url !== "") {
+// url is the url the intent was launched with
+document.querySelector("#test").innerHTML = "URL was "+url;
+}
+});
+}
+</script>        
   </head>
-  <body onload="init();" id="stage" class="theme">
-  <p><a type="submit" id="mybutton"  class="ui-btn ui-shadow ui-corner-all" >Login</a></p>		
+  <body onload="init();" >
+  <p><a type="submit" id="mybutton"  class="ui-btn ui-shadow ui-corner-all" >Prueba</a></p>		
+  
+<h1>Demo WebIntent</h1>
+<hr/>
+<div id="test"></div>
+  
   </body>
 </html>

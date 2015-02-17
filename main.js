@@ -18,13 +18,7 @@
 				  
 				  
 				  
-	navigator.startApp.check('com.waze', function(message) { /* success */
-		alert(message); // => OK
-	}, 
-	function(error) { /* error */
-		alert('error en startApp.check');
-	});
-	
+alert('dededededed');
 	
 	
 	
