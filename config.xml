@@ -56,8 +56,7 @@ permission on your app, which PhoneGap requires.
 	
 	
     <!-- Plugins can also be added here. -->
-<plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />
-
+<gap:plugin name="net.tunts.webintent" />
 
 
 

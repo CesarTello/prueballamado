@@ -18,12 +18,13 @@
 	alert('antes del llamado');			  
 				  
 				  
-window.plugins.webintent.startActivity({
-    action: window.plugins.webintent.ACTION_VIEW,
-    url: 'geo:0,0?q=' + 'New York'}, 
-    function() {alert('all good');}, 
-    function() {alert('Failed to open URL via Android Intent');}
-);
+       address = "1600+Amphitheatre+Parkway%2C+CA" ;
+       window.plugins.webintent.startActivity({
+          action: window.plugins.webintent.ACTION_VIEW,
+          url: 'geo:0,0?q=' + address}, 
+          function() {alert('success')}, 
+          function() {alert('Failed to open URL via Android Intent')}
+      );
 	
 	
 	
