@@ -52,8 +52,8 @@ permission on your app, which PhoneGap requires.
     <preference name="show-splash-screen-spinner" value="true" /> <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
     <preference name="auto-hide-splash-screen" value="true" /> <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor" value="false" /> <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
-    <preference name="android-minSdkVersion" value="14" /> <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
-    <preference name="android-installLocation" value="auto" /> <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-minSdkVersion" value="14" /> <!--  MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-installLocation" value="auto" /> <!--  app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
 	
 	<!-- Core plugins -->
@@ -79,25 +79,25 @@ A list of available plugins are available at https://build.phonegap.com/docs/plu
 <gap:config-file platform="android" parent="/manifest/application" mode="add">
 <!-- Share empfangen -->
 <activity
-android:name="DemoWebIntent"
-android:label="@string/app_name"
-android:configChanges="orientation|keyboardHidden"
+name="DemoWebIntent"
+label="@string/app_name"
+configChanges="orientation|keyboardHidden"
 >
 <intent-filter>
-<action android:name="android.intent.action.MAIN" />
-<category android:name="android.intent.category.LAUNCHER" />
+<action name="android.intent.action.MAIN" />
+<category name="android.intent.category.LAUNCHER" />
 </intent-filter>
-<intent-filter><action android:name="android.intent.action.VIEW"></action>
-<category android:name="android.intent.category.DEFAULT"></category>
-<category android:name="android.intent.category.BROWSABLE"></category>
-<data android:host="www.youtube.com" android:scheme="http"></data>
-<data android:host="www.youtube.com" android:scheme="https"></data>
+<intent-filter><action name="android.intent.action.VIEW"></action>
+<category name="android.intent.category.DEFAULT"></category>
+<category name="android.intent.category.BROWSABLE"></category>
+<data host="www.youtube.com" scheme="http"></data>
+<data host="www.youtube.com" scheme="https"></data>
 </intent-filter>
 <intent-filter>
-<action android:name="android.intent.action.SEND" />
-<category android:name="android.intent.category.DEFAULT" />
-<data android:mimeType="image/*" />
-<data android:mimeType="text/*" />
+<action name="android.intent.action.SEND" />
+<category name="android.intent.category.DEFAULT" />
+<data mimeType="image/*" />
+<data mimeType="text/*" />
 </intent-filter>
 </activity>
 </gap:config-file>
