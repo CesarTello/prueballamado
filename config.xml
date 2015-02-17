@@ -64,10 +64,10 @@ permission on your app, which PhoneGap requires.
 <gap:plugin name="org.apache.cordova.inappbrowser" />
 <gap:plugin name="org.apache.cordova.network-information" />
 <gap:plugin name="org.apache.cordova.splashscreen" />
-<feature name="http://api.phonegap.com/1.0/camera"/&gt;
-<feature name="http://api.phonegap.com/1.0/file"/&gt;
-<feature name="http://api.phonegap.com/1.0/geolocation"/&gt;
-<feature name="http://api.phonegap.com/1.0/network"/&gt;
+<feature name="http://api.phonegap.com/1.0/camera"/>
+<feature name="http://api.phonegap.com/1.0/file"/>
+<feature name="http://api.phonegap.com/1.0/geolocation"/>
+<feature name="http://api.phonegap.com/1.0/network"/>
 	
 	
     <!-- Plugins can also be added here. -->
@@ -76,8 +76,7 @@ permission on your app, which PhoneGap requires.
 <gap:plugin name="Example" />
 A list of available plugins are available at https://build.phonegap.com/docs/plugins
 -->
-<gap:config-file platform="android" parent="/manifest/application" mode="add"
->
+<gap:config-file platform="android" parent="/manifest/application" mode="add">
 <!-- Share empfangen -->
 <activity
 android:name="DemoWebIntent"
